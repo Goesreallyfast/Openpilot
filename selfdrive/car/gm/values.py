@@ -306,6 +306,6 @@ FINGERPRINTS = {
   }],
 }
 
-NO_ASCM: Set[str] = {CAR.VOLT_NR, CAR.MALIBU_NR, CAR.ACADIA_NR, CAR.BOLT_NR, CAR.EQUINOX_NR, CAR.TAHOE_NR, CAR.SILVERADO_NR, CAR.SUBURBAN, CAR.BOLT_EUV, CAR.CTSV}
+NO_ASCM: Set[str] = {CAR.VOLT_NR, CAR.MALIBU_NR, CAR.ACADIA_NR, CAR.BOLT_NR, CAR.EQUINOX_NR, CAR.TAHOE_NR, CAR.SILVERADO_NR, CAR.SUBURBAN, CAR.BOLT_EUV, CAR.CADILLAC_CTSV}
 
 DBC: Dict[str, Dict[str, str]] = defaultdict(lambda: dbc_dict('gm_global_a_powertrain_generated', 'gm_global_a_object', chassis_dbc='gm_global_a_chassis', body_dbc='gm_global_a_lowspeed_1818125'))
