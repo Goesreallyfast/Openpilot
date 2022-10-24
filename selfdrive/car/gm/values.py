@@ -111,7 +111,7 @@ CAR_INFO: Dict[str, Union[GMCarInfo, List[GMCarInfo]]] = {
   CAR.EQUINOX_NR: GMCarInfo("Chevrolet Equinox 2016-2020", "LKAS, no ACC", footnotes=[Footnote.CAM_HARNESS, Footnote.PEDAL]),
   CAR.TAHOE_NR: GMCarInfo("Chevrolet Tahoe 2016-2020", "LKAS, Basic ACC", footnotes=[Footnote.CAM_HARNESS, Footnote.STOCK_ACC]),
   CAR.SILVERADO_NR: GMCarInfo("Chevrolet Silverado 2016-2019", "LKAS, Camera-based ACC", footnotes=[Footnote.CAM_HARNESS, Footnote.STOCK_ACC]),
-  CAR.CADILLAC_CTSV: GMCarInfo("Cadillac CTSV 2016", "LKAS, no ACC", footnotes=[footnotes.CAM_HARNESS]),
+  CAR.CADILLAC_CTSV: GMCarInfo("Cadillac CTSV 2016", "LKAS, no ACC", footnotes=[footnote.CAM_HARNESS]),
   CAR.SUBURBAN: GMCarInfo("Chevrolet Suburban 2016-2019", "LKAS, Basic ACC", footnotes=[Footnote.CAM_HARNESS, Footnote.STOCK_ACC]),
   CAR.BOLT_EUV: GMCarInfo("Chevrolet BOLT EUV 2022", "LKAS, Camera-based ACC", footnotes=[Footnote.CAM_HARNESS, Footnote.STOCK_ACC])
 }
