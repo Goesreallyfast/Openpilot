@@ -50,6 +50,7 @@ class CAR:
   HOLDEN_ASTRA = "HOLDEN ASTRA RS-V BK 2017"
   VOLT = "CHEVROLET VOLT PREMIER 2017"
   CADILLAC_ATS = "CADILLAC ATS Premium Performance 2018"
+  CADILLAC_CTSV = "CADILLAC CTSV 2016"
   MALIBU = "CHEVROLET MALIBU PREMIER 2017"
   ACADIA = "GMC ACADIA DENALI 2018"
   BUICK_REGAL = "BUICK REGAL ESSENCE 2018"
@@ -96,7 +97,7 @@ class GMCarInfo(CarInfo):
 CAR_INFO: Dict[str, Union[GMCarInfo, List[GMCarInfo]]] = {
   CAR.HOLDEN_ASTRA: GMCarInfo("Holden Astra 2017", harness=Harness.custom),
   CAR.VOLT: GMCarInfo("Chevrolet Volt 2017-18", min_enable_speed=0, harness=Harness.custom),
-  CAR.CADILLAC_ATS: GMCarInfo("Cadillac ATS Premium Performance 2018"),
+  CAR.CADILLAC_ATS: GMCarInfo("Cadillac ATS Premium Performance 2018"), 
   CAR.MALIBU: GMCarInfo("Chevrolet Malibu Premier 2017", harness=Harness.custom),
   CAR.ACADIA: GMCarInfo("GMC Acadia 2018", video_link="https://www.youtube.com/watch?v=0ZN6DdsBUZo"),
   CAR.BUICK_REGAL: GMCarInfo("Buick Regal Essence 2018"),
@@ -110,6 +111,7 @@ CAR_INFO: Dict[str, Union[GMCarInfo, List[GMCarInfo]]] = {
   CAR.EQUINOX_NR: GMCarInfo("Chevrolet Equinox 2016-2020", "LKAS, no ACC", footnotes=[Footnote.CAM_HARNESS, Footnote.PEDAL]),
   CAR.TAHOE_NR: GMCarInfo("Chevrolet Tahoe 2016-2020", "LKAS, Basic ACC", footnotes=[Footnote.CAM_HARNESS, Footnote.STOCK_ACC]),
   CAR.SILVERADO_NR: GMCarInfo("Chevrolet Silverado 2016-2019", "LKAS, Camera-based ACC", footnotes=[Footnote.CAM_HARNESS, Footnote.STOCK_ACC]),
+  CAR.CADILLAC_CTSV: GMCarInfo("Cadillac CTSV 2016", "LKAS, no ACC", footnotes=[footnotes.CAM_HARNESS]),
   CAR.SUBURBAN: GMCarInfo("Chevrolet Suburban 2016-2019", "LKAS, Basic ACC", footnotes=[Footnote.CAM_HARNESS, Footnote.STOCK_ACC]),
   CAR.BOLT_EUV: GMCarInfo("Chevrolet BOLT EUV 2022", "LKAS, Camera-based ACC", footnotes=[Footnote.CAM_HARNESS, Footnote.STOCK_ACC])
 }
@@ -178,6 +180,11 @@ FINGERPRINTS = {
   # Cadillac ATS Coupe Premium Performance 3.6L RWD w/ ACC 2018
   {
     190: 6, 193: 8, 197: 8, 199: 4, 201: 8, 209: 7, 211: 2, 241: 6, 249: 8, 288: 5, 298: 8, 304: 1, 309: 8, 311: 8, 313: 8, 320: 3, 322: 7, 328: 1, 352: 5, 368: 3, 381: 6, 384: 4, 386: 8, 388: 8, 393: 7, 398: 8, 401: 8, 407: 7, 413: 8, 417: 7, 419: 1, 422: 4, 426: 7, 431: 8, 442: 8, 451: 8, 452: 8, 453: 6, 455: 7, 456: 8, 462: 4, 479: 3, 481: 7, 485: 8, 487: 8, 489: 8, 491: 2, 493: 8, 497: 8, 499: 3, 500: 6, 501: 8, 508: 8, 510: 8, 528: 5, 532: 6, 534: 2, 554: 3, 560: 8, 562: 8, 563: 5, 564: 5, 565: 5, 567: 5, 573: 1, 577: 8, 608: 8, 609: 6, 610: 6, 611: 6, 612: 8, 613: 8, 647: 6, 707: 8, 715: 8, 717: 5, 719: 5, 723: 2, 753: 5, 761: 7, 801: 8, 804: 3, 810: 8, 840: 5, 842: 5, 844: 8, 866: 4, 869: 4, 880: 6, 882: 8, 890: 1, 892: 2, 893: 2, 894: 1, 961: 8, 967: 4, 969: 8, 977: 8, 979: 8, 985: 5, 1001: 8, 1005: 6, 1009: 8, 1011: 6, 1013: 3, 1017: 8, 1019: 2, 1020: 8, 1033: 7, 1034: 7, 1105: 6, 1217: 8, 1221: 5, 1223: 3, 1225: 7, 1233: 8, 1241: 3, 1249: 8, 1257: 6, 1259: 8, 1261: 7, 1263: 4, 1265: 8, 1267: 1, 1271: 8, 1280: 4, 1296: 4, 1300: 8, 1322: 6, 1323: 4, 1328: 4, 1417: 8, 1601: 8, 1904: 7, 1906: 7, 1907: 7, 1912: 7, 1916: 7, 1917: 7, 1918: 7, 1919: 7, 1920: 7, 1930: 7, 2016: 8, 2024: 8
+  }],
+  CAR.CADILLAC_CTSV: [
+  # Cadillac CTSV 6.2L RWD w/o ACC 2016
+  {
+      190: 6, 890: 1, 201: 8, 892: 2, 211: 2, 893: 1, 398: 8, 401: 8, 487: 8, 493: 8, 199: 4, 249: 8, 884: 8, 193: 8, 197: 8, 241: 6, 456: 8, 485: 8, 508: 8, 532: 6, 562: 8, 761: 7, 840: 5, 842: 5, 866: 4, 499: 3, 417: 7, 419: 1, 426: 7, 389: 2, 442: 8, 451: 8, 455: 7, 393: 7, 452: 8, 407: 4, 413: 8, 479: 3, 422: 4, 431: 8, 489: 8, 497: 8, 500: 6, 501: 8, 647: 3, 717: 5, 801: 8, 1233: 7, 882: 8, 1009: 8, 1417: 8, 1033: 7, 1034: 7, 481: 7, 969: 8, 560: 8, 352: 5, 1221: 5, 534: 2, 707: 8, 723: 2, 298: 8, 309: 8, 381: 6, 386: 8, 388: 8, 564: 5, 567: 3, 311: 8, 817: 3, 1005: 6, 313: 8, 554: 3, 810: 8, 961: 8, 977: 8, 979: 8, 985: 5, 1001: 8, 322: 4, 1105: 6, 384: 4, 800: 6, 804: 3, 1225: 7, 1282: 4, 1925: 7, 1017: 8, 1019: 2, 1020: 8, 289: 8, 1928: 7, 1217: 8, 1223: 3, 1916: 7, 1265: 8, 1267: 1, 1906: 7, 304: 1, 1930: 7, 320: 3, 1280: 4, 1907: 7, 1257: 6, 1249: 8, 1300: 8, 1917: 7, 1322: 6, 1323: 4, 1328: 4, 1918: 7, 1919: 7, 328: 1, 1912: 7, 894: 1
   }],
   CAR.MALIBU: [
   # Malibu Premier w/ ACC 2017
@@ -299,6 +306,6 @@ FINGERPRINTS = {
   }],
 }
 
-NO_ASCM: Set[str] = {CAR.VOLT_NR, CAR.MALIBU_NR, CAR.ACADIA_NR, CAR.BOLT_NR, CAR.EQUINOX_NR, CAR.TAHOE_NR, CAR.SILVERADO_NR, CAR.SUBURBAN, CAR.BOLT_EUV}
+NO_ASCM: Set[str] = {CAR.VOLT_NR, CAR.MALIBU_NR, CAR.ACADIA_NR, CAR.BOLT_NR, CAR.EQUINOX_NR, CAR.TAHOE_NR, CAR.SILVERADO_NR, CAR.SUBURBAN, CAR.BOLT_EUV, CAR.CTSV}
 
 DBC: Dict[str, Dict[str, str]] = defaultdict(lambda: dbc_dict('gm_global_a_powertrain_generated', 'gm_global_a_object', chassis_dbc='gm_global_a_chassis', body_dbc='gm_global_a_lowspeed_1818125'))
