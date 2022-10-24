@@ -182,6 +182,12 @@ class CarInterface(CarInterfaceBase):
       ret.steerRatio = 15.3
       ret.centerToFront = ret.wheelbase * 0.49
 
+    elif candidate == CAR.CADILLAC_CTSV:
+      ret.mass = 1601. + STD_CARGO_KG
+      ret.wheelbase = 2.78
+      ret.steerRatio = 15.3
+      ret.centerToFront = ret.wheelbase * 0.49
+      
     elif candidate == CAR.ESCALADE_ESV:
       ret.minEnableSpeed = -1.  # engage speed is decided by pcm
       ret.mass = 2739. + STD_CARGO_KG
